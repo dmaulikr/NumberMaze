@@ -113,6 +113,7 @@ class ViewController: UIViewController {
         // if they guess wrong let them know
         if sender.currentTitle != "\(target)" {
             sender.backgroundColor = UIColor.redColor()
+            wrong?.volume = 0.1
             wrong?.play()
             sleep(1/8)
          
@@ -161,7 +162,7 @@ class ViewController: UIViewController {
             
             nine?.play()
         }
-        else if sender.currentTitle == "zero" {
+        else if sender.currentTitle == "0" {
             
             zero?.play()
         }
